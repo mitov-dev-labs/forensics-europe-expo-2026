@@ -19,23 +19,13 @@ function RoadmapPoster() {
               Our "Poster" Roadmap serves as the single source of truth for the 2026 vision. It outlines the global attendee profile and our pivot toward immersive learning.
             </p>
 
-            <div className="flex flex-col space-y-4">
+            <div className="flex flex-col">
               <a href="/media/v4-poster.png" target="_blank" className="group flex items-center justify-between p-4 bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg transition-all duration-300">
                 <div className="flex items-center space-x-4">
                   <div className="w-10 h-10 rounded flex items-center justify-center bg-fee-teal-500/20 text-fee-teal-400">
                     <i className="fas fa-image"></i>
                   </div>
                   <span className="font-semibold text-white">View Full Poster</span>
-                </div>
-                <i className="fas fa-arrow-right text-gray-500 group-hover:text-white transition-colors"></i>
-              </a>
-
-              <a href="/media/V4 - Forensics_Europe_2026_Roadmap.pdf" target="_blank" className="group flex items-center justify-between p-4 bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg transition-all duration-300">
-                <div className="flex items-center space-x-4">
-                  <div className="w-10 h-10 rounded flex items-center justify-center bg-white/10 text-white">
-                    <i className="fas fa-file-pdf"></i>
-                  </div>
-                  <span className="font-semibold text-white">Download PDF Slides</span>
                 </div>
                 <i className="fas fa-arrow-right text-gray-500 group-hover:text-white transition-colors"></i>
               </a>
