@@ -4,44 +4,61 @@ function RoadmapPoster() {
   const [imageError, setImageError] = useState(false)
 
   return (
-    <section id="roadmap-poster" className="py-20">
+    <section id="roadmap-poster" className="py-24 bg-fee-dark-900 border-t border-white/5">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
-          <div className="lg:col-span-1">
-            <h2 className="text-4xl font-bold mb-6">The 2026 <span className="text-blue-500">Roadmap</span></h2>
-            <p className="text-slate-400 mb-8 leading-relaxed">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+          <div className="lg:col-span-5">
+            <div className="inline-block px-3 py-1 mb-6 rounded border border-fee-teal-500/30 text-fee-teal-400 text-xs font-bold tracking-wider uppercase">
+              Vision 2026
+            </div>
+            <h2 className="text-4xl md:text-5xl font-black mb-8 leading-tight text-white">
+              THE 2026 <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-fee-teal-400 to-white">ROADMAP</span>
+            </h2>
+            <p className="text-gray-400 mb-10 text-lg leading-relaxed">
               Our "Poster" Roadmap serves as the single source of truth for the 2026 vision. It outlines the global attendee profile and our pivot toward immersive learning.
             </p>
-            <div className="space-y-4">
-              <div className="flex items-center space-x-3 text-sm">
-                <i className="fas fa-file-image text-blue-500"></i>
-                <span className="text-slate-300 font-medium">2026 Roadmap Poster</span>
-              </div>
-              <div className="flex flex-wrap gap-2">
-                <a href="/media/roadmap-poster.png" target="_blank" className="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm font-semibold transition">
-                  <i className="fas fa-image mr-2"></i>
-                  View Poster
-                </a>
-                <a href="/media/forensics-roadmap-poster.pdf" target="_blank" className="inline-flex items-center px-4 py-2 bg-slate-700 hover:bg-slate-600 text-white rounded-lg text-sm font-semibold transition">
-                  <i className="fas fa-file-pdf mr-2"></i>
-                  View Slides
-                </a>
-              </div>
+
+            <div className="flex flex-col space-y-4">
+              <a href="/media/v4-poster.png" target="_blank" className="group flex items-center justify-between p-4 bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg transition-all duration-300">
+                <div className="flex items-center space-x-4">
+                  <div className="w-10 h-10 rounded flex items-center justify-center bg-fee-teal-500/20 text-fee-teal-400">
+                    <i className="fas fa-image"></i>
+                  </div>
+                  <span className="font-semibold text-white">View Full Poster</span>
+                </div>
+                <i className="fas fa-arrow-right text-gray-500 group-hover:text-white transition-colors"></i>
+              </a>
+
+              <a href="/media/V4 - Forensics_Europe_2026_Roadmap.pdf" target="_blank" className="group flex items-center justify-between p-4 bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg transition-all duration-300">
+                <div className="flex items-center space-x-4">
+                  <div className="w-10 h-10 rounded flex items-center justify-center bg-white/10 text-white">
+                    <i className="fas fa-file-pdf"></i>
+                  </div>
+                  <span className="font-semibold text-white">Download PDF Slides</span>
+                </div>
+                <i className="fas fa-arrow-right text-gray-500 group-hover:text-white transition-colors"></i>
+              </a>
             </div>
           </div>
-          <div className="lg:col-span-2 bg-[rgba(30,41,59,0.7)] backdrop-blur-[10px] border border-white/10 p-2 rounded-[1.5rem] overflow-hidden shadow-2xl">
-            {imageError ? (
-              <div className="w-full h-[600px] rounded-[1.5rem] border border-white/10 flex items-center justify-center text-slate-400">
-                <p>Image failed to load</p>
-              </div>
-            ) : (
-              <img
-                src="/media/roadmap-poster.png"
-                alt="Forensics Europe 2026 Roadmap Poster"
-                className="w-full h-auto rounded-[1.5rem]"
-                onError={() => setImageError(true)}
-              />
-            )}
+
+          <div className="lg:col-span-7 relative">
+            <div className="absolute -inset-4 bg-gradient-to-r from-fee-teal-500/10 to-white/5 rounded-2xl blur-xl -z-10"></div>
+            <div className="bg-black border border-white/10 p-2 rounded-xl shadow-2xl">
+              {imageError ? (
+                <div className="w-full h-[500px] rounded-lg border border-white/5 flex items-center justify-center text-gray-500 flex-col space-y-4 bg-black/50">
+                  <i className="fas fa-image-slash text-4xl"></i>
+                  <p>Preview Unavailable</p>
+                </div>
+              ) : (
+                <img
+                  src="/media/v4-poster.png"
+                  alt="Forensics Europe 2026 Roadmap Poster"
+                  className="w-full h-auto rounded-lg shadow-inner"
+                  onError={() => setImageError(true)}
+                />
+              )}
+            </div>
           </div>
         </div>
       </div>

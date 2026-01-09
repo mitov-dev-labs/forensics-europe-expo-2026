@@ -40,14 +40,16 @@ class ErrorBoundary extends React.Component {
 
 function App() {
   return (
-    <div className="bg-slate-900 text-slate-100 hero-pattern min-h-screen">
+    <div className="bg-fee-dark-900 min-h-screen text-white font-sans selection:bg-fee-teal-500 selection:text-white overflow-x-hidden">
       <ErrorBoundary>
         <Navigation />
-        <Hero />
-        <StrategyVideo />
-        <RoadmapPoster />
-        <SurveyIntelligence />
-        <DocumentLibrary />
+        <main>
+          <Hero />
+          <StrategyVideo />
+          <RoadmapPoster />
+          <SurveyIntelligence />
+          <DocumentLibrary />
+        </main>
         <Footer />
       </ErrorBoundary>
     </div>
